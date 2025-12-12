@@ -1,0 +1,67 @@
+export const mockPatients = [
+  {
+    id: 1,
+    name: 'Sarah Jenkins',
+    age: 78,
+    typeOfCare: 'Elderly Care',
+    status: 'Active',
+    nextVisit: '2025-12-12',
+    caregiver: 'Emily Blunt',
+    address: '42 Maple Avenue, Springfield',
+    medications: [
+      { name: 'Donepezil', dosage: '10mg', frequency: 'Once Daily', status: 'Active' },
+      { name: 'Memantine', dosage: '5mg', frequency: 'Twice Daily', status: 'Active' },
+    ],
+    appointments: [
+      { type: 'General Checkup', date: '2025-12-12', time: '10:00 AM', doctor: 'Dr. Smith' },
+    ],
+  },
+  {
+    id: 2,
+    name: 'Robert Ford',
+    age: 65,
+    typeOfCare: 'Post-Surgery',
+    status: 'Active',
+    nextVisit: '2025-12-14',
+    caregiver: 'John Doe',
+    address: '12 Willow Lane, Springfield',
+    note: 'Recovering from hip surgery. Mobility limited.',
+    medications: [
+      { name: 'Ibuprofen', dosage: '400mg', frequency: 'As needed', status: 'Active' },
+      { name: 'Calcium Supplement', dosage: '500mg', frequency: 'Once Daily', status: 'Active' },
+    ],
+    appointments: [
+       { type: 'Physiotherapy', date: '2025-12-14', time: '02:00 PM', doctor: 'Dr. House' },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Alice Wonderland',
+    age: 50,
+    typeOfCare: 'Physiotherapy',
+    status: 'Inactive',
+    nextVisit: '2026-01-10',
+    caregiver: 'Sarah Smith',
+    address: '88 Queen St, Wonderland',
+    note: 'Therapy sessions paused for holidays.',
+    medications: [],
+    appointments: [],
+  },
+  {
+    id: 4,
+    name: 'Michael Scott',
+    age: 58,
+    typeOfCare: 'General Care',
+    status: 'Active',
+    nextVisit: '2025-12-13',
+    caregiver: 'Dwight Schrute',
+    address: '1725 Slough Avenue, Scranton',
+    note: 'Regular checkups needed.',
+    medications: [
+       { name: 'Multivitamin', dosage: '1 tab', frequency: 'Daily', status: 'Active' },
+    ],
+    appointments: [
+      { type: 'Dental Exam', date: '2025-12-13', time: '11:30 AM', doctor: 'Dr. Crentist' },
+    ],
+  },
+];
