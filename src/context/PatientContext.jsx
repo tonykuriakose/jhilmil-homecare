@@ -36,8 +36,12 @@ export const PatientProvider = ({ children }) => {
     setBookings(prev => [...prev, booking]);
   };
 
+  const addPatient = (patient) => {
+    setPatients(prev => [...prev, { ...patient, id: Date.now() }]);
+  };
+
   return (
-    <PatientContext.Provider value={{ patients, updatePatient, bookings, addBooking }}>
+    <PatientContext.Provider value={{ patients, updatePatient, bookings, addBooking, addPatient }}>
       {children}
     </PatientContext.Provider>
   );

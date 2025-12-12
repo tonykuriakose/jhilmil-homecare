@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router';
 import PatientCard from '../components/PatientCard';
 import { usePatients } from '../context/PatientContext';
 import { Activity, Search, Bell, UserCircle, Grid, Calendar } from 'lucide-react';
+import Modal from '../components/Modal';
+import AddPatientForm from '../components/AddPatientForm';
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -10,6 +12,7 @@ const Dashboard = () => {
   const [searchQuery, setSearchQuery] = React.useState('');
   const [activeTab, setActiveTab] = React.useState('All Patients');
   const [typeFilter, setTypeFilter] = React.useState('All Types');
+  const [isAddPatientModalOpen, setIsAddPatientModalOpen] = React.useState(false);
 
   const careTypes = ['All Types', ...new Set(patients.map(p => p.typeOfCare))];
 
@@ -85,7 +88,10 @@ const Dashboard = () => {
             <h2 className="text-2xl font-bold text-white">Patient Directory</h2>
             <p className="text-slate-400 mt-1">Manage and view all registered patients under care.</p>
           </div>
-          <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-lg font-medium shadow-sm hover:shadow-none transition-all flex items-center gap-2">
+          <button 
+            onClick={() => setIsAddPatientModalOpen(true)}
+            className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-lg font-medium shadow-sm hover:shadow-none transition-all flex items-center gap-2"
+          >
             <span>+ Add New Patient</span>
           </button>
         </div>
@@ -166,6 +172,14 @@ const Dashboard = () => {
           )}
         </div>
       </main>
+
+      <Modal
+        isOpen={isAddPatientModalOpen}
+        onClose={() => setIsAddPatientModalOpen(false)}
+        title="Register New Patient"
+      >
+        <AddPatientForm onClose={() => setIsAddPatientModalOpen(false)} />
+      </Modal>
     </div>
   );
 };
