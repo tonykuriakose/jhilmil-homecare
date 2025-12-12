@@ -1,9 +1,7 @@
 # Jhilmil HomeCare Dashboard
 
-A modern, responsive healthcare dashboard for managing patient care, tracking vitals, and scheduling. Built with **React** and styled with **Tailwind CSS**.
 
-![Dashboard Preview](https://via.placeholder.com/800x400?text=Jhilmil+HomeCare+Dashboard)
-*(Note: Replace with actual screenshot)*
+🔗 **Live Demo:** [https://jhilmil-homecare-orpin.vercel.app/]
 
 ## 🚀 Features
 
@@ -22,7 +20,7 @@ A modern, responsive healthcare dashboard for managing patient care, tracking vi
 - **Frontend**: React (Vite)
 - **Styling**: Tailwind CSS
 - **Icons**: Lucide React
-- **State Management**: React Context API (Local state persistence)
+- **State Management**: React Context API
 - **Routing**: React Router
 
 ## 📦 Installation & Setup
@@ -47,20 +45,9 @@ A modern, responsive healthcare dashboard for managing patient care, tracking vi
 
 ```
 src/
-├── components/       # Reusable UI components (Modal, PatientCard, Forms)
-├── context/          # State Management (PatientContext)
-├── data/             # Mock data for initial state
-├── pages/            # Main Page Views (Dashboard, PatientDetails)
-└── App.jsx           # Main Application Entry
+├── components/       # Modal, PatientCard, Forms
+├── context/          # State Management
+├── data/             # Mock data
+├── pages/            # Dashboard, PatientDetails
+└── App.jsx           # Main App Entry
 ```
-
-## 🤝 Contributing
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-Built with ❤️ for Jhilmil HomeCare.

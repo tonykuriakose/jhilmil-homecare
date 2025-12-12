@@ -4,7 +4,6 @@ import { mockPatients } from '../data/mockPatients';
 const PatientContext = createContext();
 
 export const PatientProvider = ({ children }) => {
-  // Initialize from localStorage or mock data
   const [patients, setPatients] = useState(() => {
     const savedPatients = localStorage.getItem('jhilmil_patients');
     return savedPatients ? JSON.parse(savedPatients) : mockPatients;
@@ -15,7 +14,7 @@ export const PatientProvider = ({ children }) => {
     return savedBookings ? JSON.parse(savedBookings) : [];
   });
 
-  // Save to localStorage whenever patients change
+  // Save to localStorage
   useEffect(() => {
     localStorage.setItem('jhilmil_patients', JSON.stringify(patients));
   }, [patients]);
